@@ -14,9 +14,7 @@ export default function HeroSection() {
           Hey There, <br /> I&apos;m Ihor
         </h1>
         <p className="mx-auto mb-6 max-w-146 md:mx-0">
-          A tristique nulla faucibus in quam metus, eget. Id eleifend arcu
-          consectetur nunc, quam adipiscing.A tristique nulla faucibus in quam
-          metus, eget. Id eleifend arcu consectetur nunc.
+        A Full Stack Developer dedicated to building high-performance web applications with immersive 3D experiences and AI-powered features.
         </p>
         <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center md:justify-start md:gap-6">
           <Link href={LINKS_CONSTANTS.EMAIL}>

@@ -24,10 +24,8 @@ export default function AboutSection() {
     >
       <div className="mx-auto flex w-full max-w-7xl flex-col items-center px-4 sm:px-8 lg:px-16">
         <h2 className="mb-2 text-3xl sm:text-4xl md:text-5xl">About</h2>
-        <p className="mb-6 max-w-130 text-center text-sm sm:text-base">
-          A tristique nulla faucibus in quam metus, eget. Id eleifend arcu
-          consectmetus, eget. Id eleifend arcu consectetur nunc.
-        </p>
+        <p className="mb-6 max-w-140 text-center text-sm sm:text-base">
+        I’m a Full Stack Developer building scalable digital products. I bridge the gap between robust backend logic and high-performance frontends, with a current focus on integrating AI and 3D web (R3F) into next-gen user experiences.        </p>
         <Button variant="primary">Download CV</Button>
 
         <div className="mt-10 flex w-full flex-col md:mt-16">
