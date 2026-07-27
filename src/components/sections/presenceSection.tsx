@@ -20,21 +20,24 @@ export default function PresenceSection() {
       label: "Telegram",
     },
   ];
+
   return (
     <section
       id="presence"
-      className="bg-primary w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] flex flex-row gap-20 items-center justify-center py-5 text-[#8EA5FA] mb-30"
+      className="mb-16 w-full bg-primary py-5 text-[#8EA5FA] md:mb-30"
     >
-      {presenceLinks.map((link) => (
-        <Link
-          href={link.href}
-          className="text-4xl font-bold hover:text-white transition-colors"
-          target="_blank"
-          key={link.label}
-        >
-          {link.label}
-        </Link>
-      ))}
+      <div className="mx-auto grid max-w-7xl grid-cols-2 items-center justify-items-center gap-x-4 gap-y-4 px-4 sm:gap-x-8 sm:px-8 md:flex md:flex-row md:justify-center md:gap-16 lg:gap-20 lg:px-16">
+        {presenceLinks.map((link) => (
+          <Link
+            href={link.href}
+            className="text-xl font-bold transition-colors hover:text-white sm:text-2xl md:text-3xl lg:text-4xl"
+            target="_blank"
+            key={link.label}
+          >
+            {link.label}
+          </Link>
+        ))}
+      </div>
     </section>
   );
 }

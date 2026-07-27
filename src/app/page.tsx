@@ -7,14 +7,25 @@ import ContactSection from "@/components/sections/contactSection";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center font-sans bg-background">
-      <main className="flex flex-1 w-full max-w-7xl flex-col items-center justify-between py-7 px-16 sm:items-start">
-        <HeroSection />
+    <div className="flex flex-1 flex-col items-center font-sans bg-background">
+      <main className="flex w-full flex-1 flex-col py-7">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-8 lg:px-16">
+          <HeroSection />
+        </div>
+
         <PresenceSection />
-        <PortfolioSection />
+
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-8 lg:px-16">
+          <PortfolioSection />
+        </div>
+
         <AboutSection />
+
         {/* <TestimonialSection /> */}
-        <ContactSection />
+
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-8 lg:px-16">
+          <ContactSection />
+        </div>
       </main>
     </div>
   );

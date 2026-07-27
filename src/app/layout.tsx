@@ -4,9 +4,9 @@ import "./globals.css";
 import Link from "next/link";
 import { ROUTS_CONSTANTS } from "@/constants/routs.constants";
 import { LINKS_CONSTANTS } from "@/constants/links.constants";
-// import { Github } from 'lucide-react';
 import { FaGithub, FaLinkedin, FaTelegram, FaInstagram } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
+import Header from "@/components/header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,40 +34,35 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <header className="flex flex-row items-center justify-between bg-background px-16 py-4 gap-4">
-          <Link href={ROUTS_CONSTANTS.ROOT}>LOGO</Link>
-          <nav className="flex flex-row items-center gap-10">
-            <Link href={ROUTS_CONSTANTS.HOME}>Home</Link>
-            <Link href={ROUTS_CONSTANTS.PORTFOLIO}>Portfolio</Link>
-            <Link href={ROUTS_CONSTANTS.ABOUT}>About</Link>
-            <Link href={ROUTS_CONSTANTS.TESTIMONIAL}>Testimonial</Link>
-            <Link href={ROUTS_CONSTANTS.CONTACT}>Contact</Link>
-          </nav>
-        </header>
+        <Header />
         {children}
 
-        <footer className="flex flex-row items-center justify-between bg-tertiary px-16 py-4 gap-4">
-          <Link href={ROUTS_CONSTANTS.ROOT}>LOGO</Link>
+        <footer className="flex flex-col items-center gap-6 bg-tertiary px-4 py-8 text-center sm:px-8 md:flex-row md:justify-between md:gap-4 md:px-16 md:py-4 md:text-left">
+          <Link href={ROUTS_CONSTANTS.ROOT} className="shrink-0">
+            LOGO
+          </Link>
 
           <nav className="flex flex-row items-center gap-4">
-            <Link href={LINKS_CONSTANTS.GITHUB}>
+            <Link href={LINKS_CONSTANTS.GITHUB} aria-label="GitHub">
               <FaGithub size={24} strokeWidth={1.5} />
             </Link>
-            <Link href={LINKS_CONSTANTS.LINKEDIN}>
+            <Link href={LINKS_CONSTANTS.LINKEDIN} aria-label="LinkedIn">
               <FaLinkedin size={24} strokeWidth={1.5} />
             </Link>
-            <Link href={LINKS_CONSTANTS.TELEGRAM}>
+            <Link href={LINKS_CONSTANTS.TELEGRAM} aria-label="Telegram">
               <FaTelegram size={24} strokeWidth={1.5} />
             </Link>
-            <Link href={LINKS_CONSTANTS.INSTAGRAM}>
+            <Link href={LINKS_CONSTANTS.INSTAGRAM} aria-label="Instagram">
               <FaInstagram size={24} strokeWidth={1.5} />
             </Link>
-            <Link href={LINKS_CONSTANTS.EMAIL}>
+            <Link href={LINKS_CONSTANTS.EMAIL} aria-label="Email">
               <FiMail size={24} strokeWidth={1.5} />
             </Link>
           </nav>
 
-          <p>&copy; {new Date().getFullYear()} Ihor. All Rights Reserved.</p>
+          <p className="text-sm md:text-base">
+            &copy; {new Date().getFullYear()} Ihor. All Rights Reserved.
+          </p>
         </footer>
       </body>
     </html>

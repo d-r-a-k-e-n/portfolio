@@ -20,76 +20,78 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="bg-tertiary w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] flex flex-col items-center justify-center py-12 text-foreground mb-30"
+      className="mb-16 w-full bg-tertiary py-10 text-foreground md:mb-30 md:py-12"
     >
-      <h2 className="text-5xl mb-2">About</h2>
-      <p className="max-w-130 text-center mb-6">
-        A tristique nulla faucibus in quam metus, eget. Id eleifend arcu
-        consectmetus, eget. Id eleifend arcu consectetur nunc.
-      </p>
-      <Button variant="primary">Download CV</Button>
+      <div className="mx-auto flex w-full max-w-7xl flex-col items-center px-4 sm:px-8 lg:px-16">
+        <h2 className="mb-2 text-3xl sm:text-4xl md:text-5xl">About</h2>
+        <p className="mb-6 max-w-130 text-center text-sm sm:text-base">
+          A tristique nulla faucibus in quam metus, eget. Id eleifend arcu
+          consectmetus, eget. Id eleifend arcu consectetur nunc.
+        </p>
+        <Button variant="primary">Download CV</Button>
 
-      <div className="flex flex-col w-full max-w-7xl mt-16 px-16">
-        <div className="grid grid-cols-3 w-full items-center justify-center">
-          {tabs.map((tab) => (
-            <Button
-              variant="underline"
-              key={tab}
-              onClick={() => setActiveTab(tab)}
-              className={cn(
-                activeTab === tab
-                  ? "text-secondary border-secondary text-center"
-                  : "text-foreground border-transparent hover:text-secondary/80 text-center"
+        <div className="mt-10 flex w-full flex-col md:mt-16">
+          <div className="grid w-full grid-cols-3">
+            {tabs.map((tab) => (
+              <Button
+                variant="underline"
+                key={tab}
+                onClick={() => setActiveTab(tab)}
+                className={cn(
+                  activeTab === tab
+                    ? "border-secondary text-secondary"
+                    : "border-transparent text-foreground hover:text-secondary/80"
+                )}
+              >
+                {tab}
+              </Button>
+            ))}
+          </div>
+
+          <div className="mt-8 w-full min-w-0 md:mt-10">
+            {activeTab === "Skills" && (
+              <ul className="m-0 grid list-none grid-cols-2 gap-x-4 gap-y-5 p-0 sm:grid-cols-3 sm:gap-x-8 sm:gap-y-8 md:grid-cols-4 lg:grid-cols-6">
+                {SKILLS_CONSTANTS.map((skill) => (
+                  <li
+                    key={skill}
+                    className="min-w-0 break-words font-[Lora,serif] text-base font-medium sm:text-xl md:text-2xl"
+                  >
+                    {skill}
+                  </li>
+                ))}
+              </ul>
+            )}
+
+            {activeTab === "Experience" &&
+              EXPERIENCE_CONSTANTS.map(
+                ({ period, title, role, description }, index) => (
+                  <div key={`${title}-${index}`} className="min-w-0">
+                    {index > 0 && <Separator className="my-6" />}
+                    <HistoryItem
+                      period={period}
+                      title={title}
+                      role={role}
+                      description={description}
+                    />
+                  </div>
+                )
               )}
-            >
-              {tab}
-            </Button>
-          ))}
-        </div>
 
-        <div className="w-full mt-10">
-          {activeTab === "Skills" && (
-            <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-x-10 gap-y-8 list-none p-0 m-0">
-              {SKILLS_CONSTANTS.map((skill) => (
-                <li
-                  key={skill}
-                  className="text-2xl font-[Lora,serif] font-medium"
-                >
-                  {skill}
-                </li>
-              ))}
-            </ul>
-          )}
-
-          {activeTab === "Experience" &&
-            EXPERIENCE_CONSTANTS.map(
-              ({ period, title, role, description }, index) => (
-                <div key={`${title}-${index}`}>
-                  {index > 0 && <Separator className="my-6" />}
-                  <HistoryItem
-                    period={period}
-                    title={title}
-                    role={role}
-                    description={description}
-                  />
-                </div>
-              )
-            )}
-
-          {activeTab === "Education" &&
-            EDUCATION_CONSTANTS.map(
-              ({ period, title, role, description }, index) => (
-                <div key={`${title}-${index}`}>
-                  {index > 0 && <Separator className="my-6" />}
-                  <HistoryItem
-                    period={period}
-                    title={title}
-                    role={role}
-                    description={description}
-                  />
-                </div>
-              )
-            )}
+            {activeTab === "Education" &&
+              EDUCATION_CONSTANTS.map(
+                ({ period, title, role, description }, index) => (
+                  <div key={`${title}-${index}`} className="min-w-0">
+                    {index > 0 && <Separator className="my-6" />}
+                    <HistoryItem
+                      period={period}
+                      title={title}
+                      role={role}
+                      description={description}
+                    />
+                  </div>
+                )
+              )}
+          </div>
         </div>
       </div>
     </section>

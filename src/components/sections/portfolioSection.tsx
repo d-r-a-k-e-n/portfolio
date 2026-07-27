@@ -27,17 +27,21 @@ export default function PortfolioSection() {
   ];
 
   return (
-    <section id="portfolio" className="mb-30">
-      <h2 className="text-5xl mb-6">Portfolio</h2>
-      <div className="flex flex-row gap-6 overflow-x-auto w-full">
+    <section id="portfolio" className="mb-16 w-full md:mb-30">
+      <h2 className="mb-6 text-3xl sm:text-4xl md:text-5xl">Portfolio</h2>
+      <div className="flex w-full flex-row gap-4 overflow-x-auto pb-2 sm:gap-6">
         {projects.map((project) => (
-          <Link href={`/portfolio-project/${project.id}`} key={project.id}>
+          <Link
+            href={`/portfolio-project/${project.id}`}
+            key={project.id}
+            className="shrink-0"
+          >
             <Image
               src={project.image}
               alt={project.title}
               width={600}
               height={600}
-              className="rounded-lg mb-4"
+              className="mb-4 h-auto w-64 rounded-lg sm:w-80 md:w-[400px] lg:w-[500px]"
             />
           </Link>
         ))}

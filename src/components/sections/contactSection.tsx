@@ -4,12 +4,17 @@ import Link from "next/link";
 export default function ContactSection() {
   return (
     <section id="contact" className="w-full">
-      <div className="flex flex-row items-center gap-2 justify-between mb-12">
-        <h3 className="text-2xl">Let’s work Together</h3>
-        <Link href={LINKS_CONSTANTS.EMAIL}>Send Message</Link>
+      <div className="mb-8 flex flex-col items-center gap-3 text-center sm:mb-12 sm:flex-row sm:justify-between sm:text-left">
+        <h3 className="text-xl sm:text-2xl">Let&apos;s work Together</h3>
+        <Link
+          href={LINKS_CONSTANTS.EMAIL}
+          className="hover:text-secondary transition-colors"
+        >
+          Send Message
+        </Link>
       </div>
-      <h2 className="text-6xl max-w-4xl text-center mx-auto mb-12">
-        Le’ts make something amazing together Start By{" "}
+      <h2 className="mx-auto mb-12 max-w-4xl text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+        Le&apos;ts make something amazing together Start By{" "}
         <span className="text-secondary">Saying Hi</span>
       </h2>
     </section>
