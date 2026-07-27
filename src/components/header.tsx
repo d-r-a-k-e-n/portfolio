@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ROUTS_CONSTANTS } from "@/constants/routs.constants";
 import { cn } from "@/lib/utils";
 import { Button } from "@base-ui/react";
+import { Dot, Star } from "@/components/decorations";
 
 const navLinks = [
   { href: ROUTS_CONSTANTS.HOME, label: "Home" },
@@ -18,13 +19,24 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-background px-4 py-4 sm:px-8 lg:px-16">
-      <div className="mx-auto flex max-w-7xl flex-row items-center justify-between gap-4">
+    <header className="sticky top-0 z-50 bg-background/80 px-4 py-4 backdrop-blur-md sm:px-8 lg:px-16">
+      <div className="relative mx-auto flex max-w-7xl flex-row items-center justify-between gap-4">
+        <Star
+          size={10}
+          className="pointer-events-none absolute -left-1 top-0 opacity-80 sm:-left-3"
+        />
+        <Dot className="pointer-events-none absolute -bottom-1 left-14 hidden sm:block" />
+
         <Link href={ROUTS_CONSTANTS.ROOT} className="shrink-0 font-medium">
           LOGO
         </Link>
 
-        <nav className="hidden flex-row items-center gap-8 md:flex lg:gap-10">
+        <nav className="relative hidden flex-row items-center gap-8 md:flex lg:gap-10">
+          <Star
+            size={8}
+            className="pointer-events-none absolute -top-3 left-1/3 opacity-70"
+          />
+          <Dot className="pointer-events-none absolute -bottom-2 right-8" />
           {navLinks.map((link) => (
             <Link
               key={link.label}
@@ -34,6 +46,10 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
+          <Star
+            size={12}
+            className="pointer-events-none absolute -right-6 top-1/2 -translate-y-1/2 opacity-90"
+          />
         </nav>
 
         <Button

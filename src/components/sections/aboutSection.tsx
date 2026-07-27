@@ -10,6 +10,7 @@ import {
   EXPERIENCE_CONSTANTS,
   EDUCATION_CONSTANTS,
 } from "@/constants/profile.constants";
+import Link from "next/link";
 
 const tabs = ["Skills", "Experience", "Education"] as const;
 type Tab = (typeof tabs)[number];
@@ -26,7 +27,9 @@ export default function AboutSection() {
         <h2 className="mb-2 text-3xl sm:text-4xl md:text-5xl">About</h2>
         <p className="mb-6 max-w-140 text-center text-sm sm:text-base">
         I’m a Full Stack Developer building scalable digital products. I bridge the gap between robust backend logic and high-performance frontends, with a current focus on integrating AI and 3D web (R3F) into next-gen user experiences.        </p>
-        <Button variant="primary">Download CV</Button>
+        <Link href="/CV_Ihor_Vnuk_FullStack.pdf" download="CV_Ihor_Vnuk_FullStack.pdf">
+          <Button variant="primary">Download CV</Button>
+        </Link>
 
         <div className="mt-10 flex w-full flex-col md:mt-16">
           <div className="grid w-full grid-cols-3">
