@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
+import { ROUTS_CONSTANTS } from "@/constants/routs.constants";
+import { LINKS_CONSTANTS } from "@/constants/links.constants";
+// import { Github } from 'lucide-react';
+import { FaGithub, FaLinkedin, FaTelegram, FaInstagram } from "react-icons/fa";
+import { FiMail } from "react-icons/fi";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +33,43 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <header className="flex flex-row items-center justify-between bg-background px-16 py-4 gap-4">
+          <Link href={ROUTS_CONSTANTS.ROOT}>LOGO</Link>
+          <nav className="flex flex-row items-center gap-10">
+            <Link href={ROUTS_CONSTANTS.HOME}>Home</Link>
+            <Link href={ROUTS_CONSTANTS.PORTFOLIO}>Portfolio</Link>
+            <Link href={ROUTS_CONSTANTS.ABOUT}>About</Link>
+            <Link href={ROUTS_CONSTANTS.TESTIMONIAL}>Testimonial</Link>
+            <Link href={ROUTS_CONSTANTS.CONTACT}>Contact</Link>
+          </nav>
+        </header>
+        {children}
+
+        <footer className="flex flex-row items-center justify-between bg-tertiary px-16 py-4 gap-4">
+          <Link href={ROUTS_CONSTANTS.ROOT}>LOGO</Link>
+
+          <nav className="flex flex-row items-center gap-4">
+            <Link href={LINKS_CONSTANTS.GITHUB}>
+              <FaGithub size={24} strokeWidth={1.5} />
+            </Link>
+            <Link href={LINKS_CONSTANTS.LINKEDIN}>
+              <FaLinkedin size={24} strokeWidth={1.5} />
+            </Link>
+            <Link href={LINKS_CONSTANTS.TELEGRAM}>
+              <FaTelegram size={24} strokeWidth={1.5} />
+            </Link>
+            <Link href={LINKS_CONSTANTS.INSTAGRAM}>
+              <FaInstagram size={24} strokeWidth={1.5} />
+            </Link>
+            <Link href={LINKS_CONSTANTS.EMAIL}>
+              <FiMail size={24} strokeWidth={1.5} />
+            </Link>
+          </nav>
+
+          <p>&copy; {new Date().getFullYear()} Ihor. All Rights Reserved.</p>
+        </footer>
+      </body>
     </html>
   );
 }
