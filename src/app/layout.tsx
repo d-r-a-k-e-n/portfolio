@@ -57,6 +57,13 @@ export const metadata: Metadata = {
       },
     ],
   },
+  alternates: {
+    canonical: "https://ihor-vnuk-portfolio.vercel.app/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
