@@ -60,13 +60,28 @@ export default function AboutSection() {
 
           <div className="mt-8 w-full min-w-0 md:mt-10">
             {activeTab === "Skills" && (
-              <ul className="m-0 grid list-none grid-cols-2 gap-x-4 gap-y-5 p-0 sm:grid-cols-3 sm:gap-x-8 sm:gap-y-8 md:grid-cols-4 lg:grid-cols-6">
-                {SKILLS_CONSTANTS.map((skill) => (
+              <ul className="m-0 grid list-none grid-cols-3 gap-5 p-0 sm:grid-cols-4 sm:gap-6 md:grid-cols-5 lg:grid-cols-6 lg:gap-7">
+                {SKILLS_CONSTANTS.map(({ label, icon: Icon }, index) => (
                   <li
-                    key={skill}
-                    className="min-w-0 break-words font-[Lora,serif] text-base font-medium sm:text-xl md:text-2xl text-light"
+                    key={`${label}-${Icon}-${index}`}
+                    title={label}
+                    className="flex min-w-0 flex-col items-center justify-center gap-2 text-center text-light"
                   >
-                    {skill}
+                    {Icon ? (
+                      <>
+                        <Icon
+                          aria-hidden
+                          className="size-8 shrink-0 sm:size-9 md:size-10"
+                        />
+                        <span className="max-w-full truncate text-xs font-medium sm:text-sm">
+                          {label}
+                        </span>
+                        </>
+                    ) : (
+                      <span className="font-[Lora,serif] text-sm font-medium leading-tight sm:text-base md:text-lg">
+                        {label}
+                      </span>
+                    )}
                   </li>
                 ))}
               </ul>
