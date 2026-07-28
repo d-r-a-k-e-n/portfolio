@@ -76,9 +76,7 @@ export default function AboutSection() {
               EXPERIENCE_CONSTANTS.map(
                 ({ period, title, role, description }, index) => (
                   <div key={`${title}-${index}`} className="min-w-0">
-                    {index > 0 && (
-                      <Separator className="my-6" />
-                    )}
+                    {index > 0 && <Separator className="my-6" />}
                     <HistoryItem
                       period={period}
                       title={title}
@@ -93,9 +91,7 @@ export default function AboutSection() {
               EDUCATION_CONSTANTS.map(
                 ({ period, title, role, description }, index) => (
                   <div key={`${title}-${index}`} className="min-w-0">
-                    {index > 0 && (
-                      <Separator className="my-6 text-light" />
-                    )}
+                    {index > 0 && <Separator className="my-6 text-light" />}
                     <HistoryItem
                       period={period}
                       title={title}

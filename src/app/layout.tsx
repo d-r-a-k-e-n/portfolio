@@ -24,11 +24,12 @@ export const metadata: Metadata = {
     default: "Ihor Vnuk | Full Stack Developer",
     template: "%s | Ihor Vnuk",
   },
-  description: "Full Stack Developer specializing in building scalable web applications with Next.js, AI integration, and immersive 3D web experiences.",
+  description:
+    "Full Stack Developer specializing in building scalable web applications with Next.js, AI integration, and immersive 3D web experiences.",
   keywords: [
     "Ihor Vnuk",
     "Ihor Vnuk Portfolio",
-    'FrontEnd Developer',
+    "FrontEnd Developer",
     "FullStack Developer",
     "Next.js Portfolio",
     "React Three Fiber",
@@ -46,7 +47,8 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://ihor-vnuk-portfolio.vercel.app/",
     title: "Ihor Vnuk | Full Stack Developer",
-    description: "Full Stack Developer specializing in building scalable web applications with Next.js, AI integration, and immersive 3D web experiences.",
+    description:
+      "Full Stack Developer specializing in building scalable web applications with Next.js, AI integration, and immersive 3D web experiences.",
     siteName: "Ihor Vnuk Portfolio",
     images: [
       {
@@ -76,6 +78,12 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <meta
+          name="google-site-verification"
+          content="9b2jQhEVOxlqmKVLLHxDefR6Nf1pDzCzpbc5PBZW-nY"
+        />
+      </head>
       <body className="relative min-h-full flex flex-col">
         <BackgroundBlobs />
         <div className="relative z-10 flex min-h-full flex-1 flex-col">
