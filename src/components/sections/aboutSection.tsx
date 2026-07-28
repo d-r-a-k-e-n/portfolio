@@ -24,10 +24,10 @@ export default function AboutSection() {
       className="mb-16 w-full bg-tertiary py-10 text-foreground md:mb-30 md:py-12"
     >
       <div className="mx-auto flex w-full max-w-7xl flex-col items-center px-4 sm:px-8 lg:px-16">
-        <h2 className="mb-2 text-3xl sm:text-4xl md:text-5xl text-background">
+        <h2 className="mb-2 text-3xl sm:text-4xl md:text-5xl text-light">
           About
         </h2>
-        <p className="mb-6 max-w-140 text-center text-sm sm:text-base text-background">
+        <p className="mb-6 max-w-140 text-center text-sm sm:text-base text-light">
           I’m a Full Stack Developer building scalable digital products. I
           bridge the gap between robust backend logic and high-performance
           frontends, with a current focus on integrating AI and 3D web (R3F)
@@ -50,7 +50,7 @@ export default function AboutSection() {
                 className={cn(
                   activeTab === tab
                     ? "border-secondary text-secondary"
-                    : "border-transparent text-background hover:text-secondary/80"
+                    : "border-transparent text-light hover:text-secondary/80"
                 )}
               >
                 {tab}
@@ -64,7 +64,7 @@ export default function AboutSection() {
                 {SKILLS_CONSTANTS.map((skill) => (
                   <li
                     key={skill}
-                    className="min-w-0 break-words font-[Lora,serif] text-base font-medium sm:text-xl md:text-2xl text-background"
+                    className="min-w-0 break-words font-[Lora,serif] text-base font-medium sm:text-xl md:text-2xl text-light"
                   >
                     {skill}
                   </li>
@@ -77,7 +77,7 @@ export default function AboutSection() {
                 ({ period, title, role, description }, index) => (
                   <div key={`${title}-${index}`} className="min-w-0">
                     {index > 0 && (
-                      <Separator className="my-6 text-background" />
+                      <Separator className="my-6" />
                     )}
                     <HistoryItem
                       period={period}
@@ -94,7 +94,7 @@ export default function AboutSection() {
                 ({ period, title, role, description }, index) => (
                   <div key={`${title}-${index}`} className="min-w-0">
                     {index > 0 && (
-                      <Separator className="my-6 text-background" />
+                      <Separator className="my-6 text-light" />
                     )}
                     <HistoryItem
                       period={period}
