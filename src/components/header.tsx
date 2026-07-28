@@ -11,7 +11,7 @@ const navLinks = [
   { href: ROUTS_CONSTANTS.HOME, label: "Home" },
   { href: ROUTS_CONSTANTS.PORTFOLIO, label: "Portfolio" },
   { href: ROUTS_CONSTANTS.ABOUT, label: "About" },
-  { href: ROUTS_CONSTANTS.TESTIMONIAL, label: "Testimonial" },
+  // { href: ROUTS_CONSTANTS.TESTIMONIAL, label: "Testimonial" },
   { href: ROUTS_CONSTANTS.CONTACT, label: "Contact" },
 ];
 

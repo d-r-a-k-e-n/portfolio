@@ -24,8 +24,8 @@ export default function AboutSection() {
       className="mb-16 w-full bg-tertiary py-10 text-foreground md:mb-30 md:py-12"
     >
       <div className="mx-auto flex w-full max-w-7xl flex-col items-center px-4 sm:px-8 lg:px-16">
-        <h2 className="mb-2 text-3xl sm:text-4xl md:text-5xl">About</h2>
-        <p className="mb-6 max-w-140 text-center text-sm sm:text-base">
+        <h2 className="mb-2 text-3xl sm:text-4xl md:text-5xl text-background">About</h2>
+        <p className="mb-6 max-w-140 text-center text-sm sm:text-base text-background">
         I’m a Full Stack Developer building scalable digital products. I bridge the gap between robust backend logic and high-performance frontends, with a current focus on integrating AI and 3D web (R3F) into next-gen user experiences.        </p>
         <Link href="/CV_Ihor_Vnuk_FullStack.pdf" download="CV_Ihor_Vnuk_FullStack.pdf">
           <Button variant="primary">Download CV</Button>
@@ -41,7 +41,7 @@ export default function AboutSection() {
                 className={cn(
                   activeTab === tab
                     ? "border-secondary text-secondary"
-                    : "border-transparent text-foreground hover:text-secondary/80"
+                    : "border-transparent text-background hover:text-secondary/80"
                 )}
               >
                 {tab}
@@ -55,7 +55,7 @@ export default function AboutSection() {
                 {SKILLS_CONSTANTS.map((skill) => (
                   <li
                     key={skill}
-                    className="min-w-0 break-words font-[Lora,serif] text-base font-medium sm:text-xl md:text-2xl"
+                    className="min-w-0 break-words font-[Lora,serif] text-base font-medium sm:text-xl md:text-2xl text-background"
                   >
                     {skill}
                   </li>
@@ -67,7 +67,7 @@ export default function AboutSection() {
               EXPERIENCE_CONSTANTS.map(
                 ({ period, title, role, description }, index) => (
                   <div key={`${title}-${index}`} className="min-w-0">
-                    {index > 0 && <Separator className="my-6" />}
+                    {index > 0 && <Separator className="my-6 text-background" />}
                     <HistoryItem
                       period={period}
                       title={title}
@@ -82,7 +82,7 @@ export default function AboutSection() {
               EDUCATION_CONSTANTS.map(
                 ({ period, title, role, description }, index) => (
                   <div key={`${title}-${index}`} className="min-w-0">
-                    {index > 0 && <Separator className="my-6" />}
+                    {index > 0 && <Separator className="my-6 text-background" />}
                     <HistoryItem
                       period={period}
                       title={title}

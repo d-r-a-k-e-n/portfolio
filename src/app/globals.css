@@ -3,7 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --secondary: #f2f60c;
+  --secondary: #d1d400;
   --primary: #4269f6;
   --tertiary: #23252a;
 }
@@ -36,6 +36,7 @@ p {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --secondary: #f2f60c;
   }
 }
 
@@ -43,6 +44,20 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin-top: 320px;
+}
+
+@media (min-width: 768px) {
+  section[id] {
+    scroll-margin-top: 80px;
+  }
 }
 
 @keyframes blob-float {
@@ -163,6 +178,10 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
   .bg-blob,
   .hero-fade-in,
   .hero-twinkle,
