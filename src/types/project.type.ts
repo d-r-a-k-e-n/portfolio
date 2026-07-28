@@ -2,7 +2,7 @@ export interface IProjectSection {
   title: string;
   description: string;
   points: string[];
-};
+}
 
 export interface IProject {
   id: string;
@@ -16,4 +16,4 @@ export interface IProject {
   previewImage: string;
   overview: IProjectSection;
   result: IProjectSection;
-};
+}

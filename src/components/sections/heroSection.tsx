@@ -41,8 +41,9 @@ export default function HeroSection() {
           <Link href={LINKS_CONSTANTS.EMAIL}>
             <Button variant="primary">Say Hello</Button>
           </Link>
-            <Link href={ROUTS_CONSTANTS.PORTFOLIO}>          <Button variant="outline">Explore Project</Button>
-            </Link>
+          <Link href={ROUTS_CONSTANTS.PORTFOLIO}>
+            <Button variant="outline">Explore Project</Button>
+          </Link>
         </div>
       </div>
 
@@ -69,7 +70,7 @@ export default function HeroSection() {
           <SquiggleArrow className="h-16 w-12 rotate-150 opacity-80" />
         </div>
 
-        <div className="hero-portrait bg-primary relative flex h-80 w-64 items-end justify-center overflow-hidden rounded-full sm:h-100 sm:w-72 md:h-120 md:w-80 lg:h-160 lg:w-100">
+        <div className="bg-primary relative flex h-80 w-64 items-end justify-center overflow-hidden rounded-full sm:h-100 sm:w-72 md:h-120 md:w-80 lg:h-160 lg:w-100">
           <Image
             src="/sticker.webp"
             alt="Hero Image"

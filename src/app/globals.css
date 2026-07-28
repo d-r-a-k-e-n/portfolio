@@ -147,16 +147,6 @@ section[id] {
   }
 }
 
-@keyframes hero-portrait {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-6px);
-  }
-}
-
 .hero-fade-in {
   animation: hero-fade-in 0.8s ease-out both;
 }
