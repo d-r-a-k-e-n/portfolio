@@ -21,7 +21,7 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="mb-16 w-full bg-tertiary py-10 text-foreground md:mb-30 md:py-12"
+      className="mb-16 w-full bg-tertiary/45 py-10 text-foreground md:mb-30 md:py-12"
     >
       <div className="mx-auto flex w-full max-w-7xl flex-col items-center px-4 sm:px-8 lg:px-16">
         <h2 className="mb-2 text-3xl sm:text-4xl md:text-5xl text-light">
@@ -31,7 +31,7 @@ export default function AboutSection() {
           I’m a Full Stack Developer building scalable digital products. I
           bridge the gap between robust backend logic and high-performance
           frontends, with a current focus on integrating AI and 3D web (R3F)
-          into next-gen user experiences.{" "}
+          into next-gen user experiences.
         </p>
         <Link
           href="/CV_Ihor_Vnuk_FullStack.pdf"
