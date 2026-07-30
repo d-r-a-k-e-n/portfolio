@@ -8,6 +8,7 @@ import { FaGithub, FaLinkedin, FaTelegram, FaInstagram } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
 import Header from "@/components/header";
 import BackgroundBlobs from "@/components/backgroundBlobs";
+import Image from "next/image";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -92,7 +93,7 @@ export default function RootLayout({
 
           <footer className="flex flex-col items-center gap-6 bg-tertiary/45 px-4 py-8 text-center text-light sm:px-8 md:flex-row md:justify-between md:gap-4 md:px-16 md:py-4 md:text-left">
             <Link href={ROUTS_CONSTANTS.ROOT} className="shrink-0">
-              LOGO
+              <Image src="/logo.png" alt="Logo" width={30} height={30} />
             </Link>
 
             <nav className="flex flex-row items-center gap-4">
