@@ -1,15 +1,25 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import { PORTFOLIO_PROJECTS } from "@/constants/portfolio.constants";
+import { useDictionary } from "@/components/dictionary-provider";
+import { getRoutes } from "@/constants/routs.constants";
+import { getLocalizedProjects } from "@/lib/get-localized-project";
 
 export default function PortfolioSection() {
+  const { dict, lang } = useDictionary();
+  const routes = getRoutes(lang);
+  const projects = getLocalizedProjects(dict);
+
   return (
     <section id="portfolio" className="mb-16 w-full md:mb-30">
-      <h2 className="mb-6 text-3xl sm:text-4xl md:text-5xl">Portfolio</h2>
+      <h2 className="mb-6 text-3xl sm:text-4xl md:text-5xl">
+        {dict.portfolio.title}
+      </h2>
       <div className="flex w-full flex-row gap-4 overflow-x-auto pb-2 sm:gap-6">
-        {PORTFOLIO_PROJECTS.map((project) => (
+        {projects.map((project) => (
           <Link
-            href={`/portfolio-project/${project.id}`}
+            href={routes.project(project.id)}
             key={project.id}
             className="shrink-0"
           >

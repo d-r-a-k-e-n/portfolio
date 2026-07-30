@@ -4,8 +4,24 @@ import PortfolioSection from "@/components/sections/portfolioSection";
 import AboutSection from "@/components/sections/aboutSection";
 import TestimonialSection from "@/components/sections/testimonialSectionn";
 import ContactSection from "@/components/sections/contactSection";
+import { isLocale, locales } from "@/i18n/config";
+import { notFound } from "next/navigation";
 
-export default function Home() {
+type PageProps = {
+  params: Promise<{ lang: string }>;
+};
+
+export async function generateStaticParams() {
+  return locales.map((lang) => ({ lang }));
+}
+
+export default async function Page({ params }: PageProps) {
+  const { lang } = await params;
+
+  if (!isLocale(lang)) {
+    notFound();
+  }
+
   return (
     <div className="flex flex-1 flex-col items-center font-sans">
       <main className="flex w-full flex-1 flex-col py-7">

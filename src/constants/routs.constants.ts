@@ -1,10 +1,15 @@
-const ROOT_PATH = "/";
+import type { Locale } from "@/i18n/config";
 
-export const ROUTS_CONSTANTS = {
-  ROOT: ROOT_PATH,
-  HOME: `${ROOT_PATH}#home`,
-  PORTFOLIO: `${ROOT_PATH}#portfolio`,
-  ABOUT: `${ROOT_PATH}#about`,
-  TESTIMONIAL: `${ROOT_PATH}#testimonial`,
-  CONTACT: `${ROOT_PATH}#contact`,
-} as const;
+export function getRoutes(lang: Locale) {
+  const root = `/${lang}`;
+
+  return {
+    ROOT: root,
+    HOME: `${root}#home`,
+    PORTFOLIO: `${root}#portfolio`,
+    ABOUT: `${root}#about`,
+    TESTIMONIAL: `${root}#testimonial`,
+    CONTACT: `${root}#contact`,
+    project: (id: string) => `${root}/portfolio-project/${id}`,
+  } as const;
+}

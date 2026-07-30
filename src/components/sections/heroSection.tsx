@@ -1,11 +1,17 @@
-import { Button } from "../ui/button";
+"use client";
+
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { LINKS_CONSTANTS } from "@/constants/links.constants";
 import Image from "next/image";
 import { Orbit, SquiggleArrow, Star } from "@/components/decorations";
-import { ROUTS_CONSTANTS } from "@/constants/routs.constants";
+import { getRoutes } from "@/constants/routs.constants";
+import { useDictionary } from "@/components/dictionary-provider";
 
 export default function HeroSection() {
+  const { dict, lang } = useDictionary();
+  const routes = getRoutes(lang);
+
   return (
     <section
       id="home"
@@ -14,7 +20,7 @@ export default function HeroSection() {
       <div className="hero-fade-in w-full text-center md:text-left md:flex-1">
         <div className="relative mb-6 inline-block md:mb-10">
           <h1 className="relative z-10 text-5xl sm:text-6xl md:text-7xl lg:text-8xl">
-            Hey There, <br /> I&apos;m Ihor
+            {dict.hero.titleLine1} <br /> {dict.hero.titleLine2}
           </h1>
           <Orbit className="hero-orbit absolute -inset-x-6 -inset-y-2 hidden w-[calc(100%+3rem)] sm:block md:-inset-x-10 md:w-[calc(100%+5rem)]" />
           <Star
@@ -34,15 +40,14 @@ export default function HeroSection() {
         </div>
 
         <p className="mx-auto mb-6 max-w-146 md:mx-0">
-          A Full Stack Developer dedicated to building high-performance web
-          applications with immersive 3D experiences and AI-powered features.
+          {dict.hero.description}
         </p>
         <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center md:justify-start md:gap-6">
           <Link href={LINKS_CONSTANTS.EMAIL}>
-            <Button variant="primary">Say Hello</Button>
+            <Button variant="primary">{dict.hero.sayHello}</Button>
           </Link>
-          <Link href={ROUTS_CONSTANTS.PORTFOLIO}>
-            <Button variant="outline">Explore Project</Button>
+          <Link href={routes.PORTFOLIO}>
+            <Button variant="outline">{dict.hero.exploreProject}</Button>
           </Link>
         </div>
       </div>
