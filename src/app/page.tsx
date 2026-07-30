@@ -21,7 +21,7 @@ export default function Home() {
 
         <AboutSection />
 
-        {/* <TestimonialSection /> */}
+        <TestimonialSection />
 
         <div className="mx-auto w-full max-w-7xl px-4 sm:px-8 lg:px-16">
           <ContactSection />

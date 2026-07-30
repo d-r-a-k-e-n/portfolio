@@ -11,8 +11,8 @@ export const PORTFOLIO_PROJECTS: IProject[] = [
       "Drive Customizer is a high-fidelity, full-stack 3D automotive configuration platform. The project showcases a seamless blend of immersive 3D graphics and modern web development, allowing users to interactively customize vehicles in real-time. It features a complete ecosystem-from an engaging landing page and model selection catalog to a sophisticated 3D editor and a community showcase-all built on a robust, scalable architecture.",
     skills: ["TypeScript", "Tailwind CSS", "Next.js", "NestJS", "Three.js"],
     liveUrl: "https://drive-customizer.vercel.app/",
-    image: "/dc.png",
-    previewImage: "/dcp.png",
+    image: "/portfolio/dc.png",
+    previewImage: "/portfolio/dcp.png",
     overview: {
       title: "The Task",
       description:
@@ -47,8 +47,8 @@ export const PORTFOLIO_PROJECTS: IProject[] = [
       "Simple chocolate is a modern, high-performance e-commerce platform designed for a boutique chocolate store. The project demonstrates a full-cycle development approach, from architecting a scalable Nx Monorepo to implementing secure payment processing. It features a seamless user experience, a robust product management system, and a responsive design.",
     skills: ["React", "ExpressJS", "MongoDB", "Stripe", "DevOps"],
     liveUrl: "https://my-simply-chocolate.vercel.app/",
-    image: "/sc.png",
-    previewImage: "/scp.png",
+    image: "/portfolio/sc.png",
+    previewImage: "/portfolio/scp.png",
 
     overview: {
       title: "The Task",
@@ -82,8 +82,8 @@ export const PORTFOLIO_PROJECTS: IProject[] = [
       "Hogwarts Explorer is a dynamic, interactive web application designed for fans of the Wizarding World. The project is an API-driven encyclopedia that allows users to discover characters, filter them by houses, search for favorites, and view detailed information. It demonstrates a professional approach to building multi-page applications using modern JavaScript, modular SCSS, and efficient data handling.",
     skills: ["Pages", "JavaScript", "HTML", "SCSS", "REST API"],
     liveUrl: "https://d-r-a-k-e-n.github.io/Harry-Potter/",
-    image: "/hp.png",
-    previewImage: "/hpp.png",
+    image: "/portfolio/hp.png",
+    previewImage: "/portfolio/hpp.png",
     overview: {
       title: "The Task",
       description:

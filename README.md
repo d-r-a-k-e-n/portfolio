@@ -19,10 +19,10 @@ Personal portfolio website of a Full Stack developer. Dark modern UI, project ca
 
 ### Featured projects
 
-| Drive Customizer | Simply Chocolate | Harry Potter Encyclopedia |
-| :---: | :---: | :---: |
-| <img src="./public/dc.png" alt="Drive Customizer" width="280" /> | <img src="./public/sc.png" alt="Simply Chocolate" width="280" /> | <img src="./public/hp.png" alt="Harry Potter" width="280" /> |
-| [Live](https://drive-customizer.vercel.app/) · Drive customizer | [Live](https://my-simply-chocolate.vercel.app/) · Simply chocolate | [Live](https://d-r-a-k-e-n.github.io/Harry-Potter/) · Harry Potter |
+|                         Drive Customizer                         |                          Simply Chocolate                          |                     Harry Potter Encyclopedia                      |
+| :--------------------------------------------------------------: | :----------------------------------------------------------------: | :----------------------------------------------------------------: |
+| <img src="./public/dc.png" alt="Drive Customizer" width="280" /> |  <img src="./public/sc.png" alt="Simply Chocolate" width="280" />  |    <img src="./public/hp.png" alt="Harry Potter" width="280" />    |
+| [Live](https://drive-customizer.vercel.app/) · Drive customizer  | [Live](https://my-simply-chocolate.vercel.app/) · Simply chocolate | [Live](https://d-r-a-k-e-n.github.io/Harry-Potter/) · Harry Potter |
 
 ---
 
@@ -40,15 +40,15 @@ Personal portfolio website of a Full Stack developer. Dark modern UI, project ca
 
 ## Tech stack
 
-| Layer | Tools |
-| --- | --- |
-| Framework | [Next.js 16](https://nextjs.org/) (App Router) |
-| Language | [TypeScript](https://www.typescriptlang.org/) |
-| UI | [React 19](https://react.dev/), [Tailwind CSS 4](https://tailwindcss.com/), [Base UI](https://base-ui.com/) |
-| Icons | [react-icons](https://react-icons.github.io/react-icons/) |
+| Layer         | Tools                                                                                                       |
+| ------------- | ----------------------------------------------------------------------------------------------------------- |
+| Framework     | [Next.js 16](https://nextjs.org/) (App Router)                                                              |
+| Language      | [TypeScript](https://www.typescriptlang.org/)                                                               |
+| UI            | [React 19](https://react.dev/), [Tailwind CSS 4](https://tailwindcss.com/), [Base UI](https://base-ui.com/) |
+| Icons         | [react-icons](https://react-icons.github.io/react-icons/)                                                   |
 | Styling utils | [class-variance-authority](https://cva.style/), [tailwind-merge](https://github.com/dcastil/tailwind-merge) |
-| Tooling | ESLint, Prettier |
-| Deploy | [Vercel](https://vercel.com/) |
+| Tooling       | ESLint, Prettier                                                                                            |
+| Deploy        | [Vercel](https://vercel.com/)                                                                               |
 
 ---
 
@@ -86,14 +86,14 @@ npm start
 
 ## Scripts
 
-| Command | Description |
-| --- | --- |
-| `npm run dev` | Start local development server |
-| `npm run build` | Create production build |
-| `npm start` | Run production build |
-| `npm run lint` | Run ESLint |
-| `npm run format` | Format with Prettier |
-| `npm run format:check` | Check Prettier formatting |
+| Command                | Description                    |
+| ---------------------- | ------------------------------ |
+| `npm run dev`          | Start local development server |
+| `npm run build`        | Create production build        |
+| `npm start`            | Run production build           |
+| `npm run lint`         | Run ESLint                     |
+| `npm run format`       | Format with Prettier           |
+| `npm run format:check` | Check Prettier formatting      |
 
 ---
 

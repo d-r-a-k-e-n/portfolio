@@ -76,7 +76,7 @@ export default function AboutSection() {
                         <span className="max-w-full truncate text-xs font-medium sm:text-sm">
                           {label}
                         </span>
-                        </>
+                      </>
                     ) : (
                       <span className="font-[Lora,serif] text-sm font-medium leading-tight sm:text-base md:text-lg">
                         {label}
@@ -91,7 +91,7 @@ export default function AboutSection() {
               EXPERIENCE_CONSTANTS.map(
                 ({ period, title, role, description }, index) => (
                   <div key={`${title}-${index}`} className="min-w-0">
-                    {index > 0 && <Separator className="my-6" />}
+                    {index > 0 && <Separator className="my-6 text-light" />}
                     <HistoryItem
                       period={period}
                       title={title}
