@@ -47,6 +47,10 @@ export async function generateMetadata({
       template: `%s | Ihor Vnuk`,
     },
     description: dict.meta.description,
+    icons: {
+      icon: [{ url: "/favicon.ico" }, { url: "/icon.png", type: "image/png" }],
+      apple: [{ url: "/icon.png" }],
+    },
     keywords: [
       "Ihor Vnuk",
       "Ihor Vnuk Portfolio",
