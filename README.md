@@ -2,9 +2,9 @@
 
 Personal portfolio website of a Full Stack developer. Dark modern UI, project case studies, skills, experience, and contact section.
 
-**Live:** [ihor-vnuk-portfolio.vercel.app](https://ihor-vnuk-portfolio.vercel.app/)
+**Live:** [ihorvnuk.dev](https://ihorvnuk.dev/)
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-4269f6?style=for-the-badge)](https://ihor-vnuk-portfolio.vercel.app/)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-4269f6?style=for-the-badge)](https://ihorvnuk.dev/)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=nextdotjs)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-4-38BDF8?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
@@ -120,7 +120,7 @@ public/                     # Images, CV, OG image
 
 ## Contact
 
-- **Portfolio:** [ihor-vnuk-portfolio.vercel.app](https://ihor-vnuk-portfolio.vercel.app/)
+- **Portfolio:** [ihorvnuk.dev](https://ihorvnuk.dev/)
 - **GitHub:** [d-r-a-k-e-n](https://github.com/d-r-a-k-e-n)
 - **LinkedIn:** [ihor-vnuk](https://www.linkedin.com/in/ihor-vnuk)
 - **Telegram:** [@ihor_vnuk](https://t.me/ihor_vnuk)

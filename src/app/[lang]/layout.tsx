@@ -65,7 +65,7 @@ export async function generateMetadata({
     openGraph: {
       type: "website",
       locale: locale === "uk" ? "uk_UA" : "en_US",
-      url: `https://ihor-vnuk-portfolio.vercel.app/${locale}`,
+      url: `https://ihorvnuk.dev/${locale}`,
       title: dict.meta.title,
       description: dict.meta.description,
       siteName: "Ihor Vnuk Portfolio",
@@ -79,10 +79,10 @@ export async function generateMetadata({
       ],
     },
     alternates: {
-      canonical: `https://ihor-vnuk-portfolio.vercel.app/${locale}`,
+      canonical: `https://ihorvnuk.dev/${locale}`,
       languages: {
-        en: "https://ihor-vnuk-portfolio.vercel.app/en",
-        uk: "https://ihor-vnuk-portfolio.vercel.app/uk",
+        en: "https://ihorvnuk.dev/en",
+        uk: "https://ihorvnuk.dev/uk",
       },
     },
     robots: {
